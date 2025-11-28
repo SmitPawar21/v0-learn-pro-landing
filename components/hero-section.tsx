@@ -1,135 +1,169 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight, CheckCircle2, Users, Zap } from "lucide-react"
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden px-6 py-20 sm:py-32">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -right-40 -bottom-40 h-80 w-80 rounded-full bg-secondary/10 blur-3xl" />
+    <section className="relative px-6 py-24 sm:py-32 overflow-hidden">
+      {/* Clean Background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-slate-100 rounded-3xl opacity-40 blur-2xl" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-slate-50 rounded-3xl opacity-30 blur-2xl" />
       </div>
 
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          {/* Content */}
-          <div className="flex flex-col gap-8">
-            {/* Badge */}
-            <div className="flex w-fit items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
-              <Sparkles className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-primary">New bootcamp cohort launching</span>
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
+          {/* Left Content */}
+          <div className="flex flex-col gap-10">
+            {/* Status Badge */}
+            <div className="inline-flex w-fit items-center gap-2 bg-slate-50 rounded-lg px-3 py-1.5 border border-slate-200">
+              <div className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="text-xs font-semibold text-slate-700 tracking-wide uppercase">New cohort launching</span>
             </div>
 
-            {/* Headline */}
-            <div className="flex flex-col gap-4">
-              <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl text-foreground">
-                Upskill with
-                <span className="block">structured</span>
-                <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  learning pathways
-                </span>
+            {/* Main Headline */}
+            <div className="flex flex-col gap-6">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-900">
+                Master skills that matter
               </h1>
 
               {/* Subheading */}
-              <p className="text-lg text-muted-foreground sm:text-xl max-w-md">
-                Learn job-ready skills with expert mentors, real projects, and guided learning journeys.
+              <p className="text-lg text-slate-600 leading-relaxed max-w-xl">
+                Learn from industry experts, build real projects, and join thousands of professionals advancing their careers through structured learning pathways.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button 
+                size="lg" 
+                className="bg-slate-900 hover:bg-slate-800 text-white rounded-lg h-12 px-8 font-semibold flex items-center gap-2"
+              >
                 Start Learning Free
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="w-4 h-4" />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="rounded-full border-border/40 hover:bg-muted bg-transparent"
+                className="rounded-lg h-12 px-8 font-semibold border-slate-300 hover:bg-slate-50 text-slate-900"
               >
                 Explore Courses
               </Button>
             </div>
 
-            {/* Trust Signals */}
-            <div className="flex flex-col gap-3 pt-4">
-              <p className="text-sm text-muted-foreground">Trusted by learners worldwide</p>
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary border-2 border-background"
-                    />
-                  ))}
+            {/* Features List */}
+            <div className="grid grid-cols-2 gap-6 pt-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900 text-sm">Expert Mentors</p>
+                  <p className="text-slate-600 text-xs">Learn from industry leaders</p>
                 </div>
-                <span className="text-sm text-muted-foreground">5,000+ learners already enrolled</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900 text-sm">Real Projects</p>
+                  <p className="text-slate-600 text-xs">Build portfolio-ready work</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900 text-sm">Job Ready</p>
+                  <p className="text-slate-600 text-xs">Get hired faster</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900 text-sm">Lifetime Access</p>
+                  <p className="text-slate-600 text-xs">Learn at your own pace</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Proof */}
+            <div className="flex items-center gap-6 pt-4 border-t border-slate-200">
+              <div className="flex -space-x-2">
+                {[...Array(3)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-10 h-10 rounded-full bg-gradient-to-br from-slate-300 to-slate-400 border-2 border-white flex items-center justify-center text-xs font-bold text-slate-700"
+                  >
+                    {String.fromCharCode(65 + i)}
+                  </div>
+                ))}
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-900">5,000+ learners</p>
+                <p className="text-xs text-slate-500">already enrolled</p>
               </div>
             </div>
           </div>
 
-          {/* Right Side Illustration */}
-          <div className="relative hidden lg:flex items-center justify-center">
-            <div className="relative w-full">
-              {/* Main Dashboard Card */}
-              <div className="rounded-2xl bg-card border border-border/40 p-6 shadow-2xl">
-                <div className="space-y-4">
-                  {/* Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="h-3 w-3 rounded-full bg-primary" />
-                    <div className="flex gap-2">
-                      <div className="h-2 w-2 rounded-full bg-primary/40" />
-                      <div className="h-2 w-2 rounded-full bg-primary/40" />
-                    </div>
+          {/* Right Side - Dashboard Mockup */}
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="relative w-full h-full min-h-96">
+              {/* Main Card */}
+              <div className="relative rounded-2xl bg-white border border-slate-200 shadow-2xl overflow-hidden">
+                {/* Header Bar */}
+                <div className="bg-gradient-to-r from-slate-900 to-slate-800 px-6 py-4 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-white" />
+                    <span className="text-white font-semibold">Learning Dashboard</span>
                   </div>
-
-                  {/* Content Blocks */}
-                  <div className="space-y-3">
-                    <div className="h-4 w-24 rounded-lg bg-primary/10" />
-                    <div className="h-12 rounded-lg bg-gradient-to-r from-primary/20 to-secondary/20" />
-                  </div>
-
-                  {/* Progress Bars */}
-                  <div className="space-y-3 pt-2">
-                    <div className="flex items-center gap-2">
-                      <div className="h-1.5 flex-1 rounded-full bg-muted">
-                        <div className="h-full w-3/4 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-xs text-muted-foreground">75%</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="h-1.5 flex-1 rounded-full bg-muted">
-                        <div className="h-full w-1/2 rounded-full bg-secondary" />
-                      </div>
-                      <span className="text-xs text-muted-foreground">50%</span>
-                    </div>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-2 border-t border-border/40 pt-4">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-primary">8</div>
-                      <div className="text-xs text-muted-foreground">Courses</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-secondary">24</div>
-                      <div className="text-xs text-muted-foreground">Hours</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-accent">92%</div>
-                      <div className="text-xs text-muted-foreground">Progress</div>
-                    </div>
+                  <div className="flex gap-2">
+                    <div className="w-2.5 h-2.5 rounded-full bg-white/30" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-white/30" />
                   </div>
                 </div>
-              </div>
 
-              {/* Floating Cards */}
-              <div className="absolute -right-6 -bottom-6 rounded-xl bg-card border border-border/40 p-4 shadow-lg backdrop-blur-sm">
-                <div className="flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-accent" />
-                  <span className="text-sm font-medium text-foreground">Learning active</span>
+                {/* Content */}
+                <div className="p-6 space-y-6">
+                  {/* Course Stats */}
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-slate-900">8</div>
+                      <p className="text-xs text-slate-500 mt-1">Active Courses</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-slate-900">42</div>
+                      <p className="text-xs text-slate-500 mt-1">Hours Learned</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-emerald-600">92%</div>
+                      <p className="text-xs text-slate-500 mt-1">Completion</p>
+                    </div>
+                  </div>
+
+                  {/* Progress Sections */}
+                  <div className="space-y-4 border-t border-slate-200 pt-6">
+                    <div>
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm font-medium text-slate-900">Web Development</span>
+                        <span className="text-xs text-slate-500">75%</span>
+                      </div>
+                      <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+                        <div className="h-full w-3/4 bg-emerald-500 rounded-full" />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm font-medium text-slate-900">UI Design</span>
+                        <span className="text-xs text-slate-500">50%</span>
+                      </div>
+                      <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+                        <div className="h-full w-1/2 bg-blue-500 rounded-full" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action */}
+                  <button className="w-full mt-4 bg-slate-900 hover:bg-slate-800 text-white py-2.5 rounded-lg font-medium transition-colors text-sm">
+                    Continue Learning
+                  </button>
                 </div>
               </div>
             </div>
