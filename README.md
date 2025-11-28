@@ -14,7 +14,7 @@ Every update you make inside v0 is automatically committed and synced here, ensu
 
 Your live project is available at:
 
-**[https://vercel.com/pawarsmit2108-gmailcoms-projects/v0-learn-pro-landing-page](https://vercel.com/pawarsmit2108-gmailcoms-projects/v0-learn-pro-landing-page)**
+**[https://v0-learn-pro-landing-page.vercel.app/](https://v0-learn-pro-landing-page.vercel.app/)**
 
 ## Build Your App
 
